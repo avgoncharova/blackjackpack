@@ -1,2 +1,2 @@
 # blackjackpack
-Black Jack
+Black Jack written in Python. 
