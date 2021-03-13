@@ -1,4 +1,6 @@
 # blackjackpack
-Black Jack written in Python. 
+This is a one player Black Jack game. 
 
-I am currently in process of testing the code. I will be posting improved versions as I work out the bugs. 
+I wrote this code iwhile studying Python Bootcamp Course in Udemy taught by Jose Portilla. 
+
+The assigment was to use Object Oriented Programming to create a game of Black Jack using Python.
