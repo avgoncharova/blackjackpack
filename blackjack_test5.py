@@ -260,7 +260,7 @@ while True:
 
                 # different ending scenarios if player is below 21 and dealer does not need one more card
                 if dealer.value < 21 and dealer.value > 17:
-                    print("Dealer Value adjusted for Ace <21 and >17 *4")
+                    # print("Dealer Value adjusted for Ace <21 and >17 *4")
                     #       dealer.adjust_for_ace())
 
                     if dealer.value > player.value:
@@ -285,12 +285,12 @@ while True:
 
                 # ending scenario in case dealer's hand value exceeds 21
                 elif dealer.value > 21:
-                    print("Dealer value is greater than 21 *8")
+                    # print("Dealer value is greater than 21 *8")
                     dealer_busts(dealer, chips)
                     break
                 # ending scenario in case dealer's hand is 21
                 elif dealer.value == 21:
-                    print("Dealer value equals 21 *9")
+                    # print("Dealer value equals 21 *9")
                     dealer_wins(dealer, chips)
                     break
         # ending scenarios for when neither player nor dealer have busted
