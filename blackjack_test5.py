@@ -200,6 +200,21 @@ def show_all(player, dealer):
     # print(f"Value: {player.adjust_for_ace()}")
 
 
+def game_on():
+    while True:
+        play_again = input("\nWould you like to play again?: Yes/No ")
+        if play_again.lower() == 'yes':
+            print("Game On.")
+            break
+        elif play_again.lower() == 'no':
+            print("Exiting the Game.")
+            break
+        else:
+            print("Invalid input. Please try again.")
+            continue
+    return play_again.lower()
+
+
 # putting together the pieces for the game
 playing = True
 
@@ -316,17 +331,29 @@ while True:
         break
     else:
         # Ask to play again if there is a remaining chip balance
-        print("Dealer Value was: ", dealer.value)
-        play_again = input("\nWould you like to play again?: Yes/No ")
-        if play_again.lower() == 'yes':
+        play_again = game_on()
+        if play_again == 'yes':
+            total = chips.total
             playing = True
-            total = chips.total
-            continue
         elif play_again.lower() == 'no':
-            print("Thank you for playing!")
-            playing = False
             total = chips.total
+            playing = False
             break
-        else:
-            print("Invalid Input. Exiting the Game.")
-        break
+
+# code backup
+    # else:
+    #     # Ask to play again if there is a remaining chip balance
+    #     print("Dealer Value was: ", dealer.value)
+    #     play_again = input("\nWould you like to play again?: Yes/No ")
+    #     if play_again.lower() == 'yes':
+    #         playing = True
+    #         total = chips.total
+    #         continue
+    #     elif play_again.lower() == 'no':
+    #         print("Thank you for playing!")
+    #         playing = False
+    #         total = chips.total
+    #         break
+    #     else:
+    #         print("Invalid Input. Exiting the Game.")
+    #     break
